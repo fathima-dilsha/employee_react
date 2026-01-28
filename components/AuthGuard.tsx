@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { isAuthenticated } from '@/services/auth.service';
+
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { isAuthenticated } from '@/app/api/auth';
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
     const router = useRouter();
